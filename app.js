@@ -140,3 +140,40 @@ for (let i = 0; i < 100; i++) pts.push(new Particle());
 
   requestAnimationFrame(animateCanvas);
 })();
+/* ══════════════════════════════════════════════════
+   NÁTALY GALLERY
+══════════════════════════════════════════════════ */
+(function () {
+  const TOTAL  = 10;
+  const img    = document.getElementById('natGalleryImg');
+  const curr   = document.getElementById('natCurrent');
+  const prev   = document.getElementById('natPrev');
+  const next   = document.getElementById('natNext');
+  const dots   = document.querySelectorAll('.nat-dot');
+  let   index  = 0;
+
+  function goTo(n) {
+    index = (n + TOTAL) % TOTAL;
+    img.classList.add('fade');
+    setTimeout(() => {
+      img.src = (index + 1) + '.jpeg';
+      img.alt = 'Nátaly Raposo foto ' + (index + 1);
+      curr.textContent = index + 1;
+      img.classList.remove('fade');
+    }, 180);
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+  }
+
+  prev.addEventListener('click', () => goTo(index - 1));
+  next.addEventListener('click', () => goTo(index + 1));
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.i)));
+
+  /* Swipe support */
+  let startX = 0;
+  const stage = document.querySelector('.nat-gallery-stage');
+  stage.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener('touchend',   e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) goTo(dx < 0 ? index + 1 : index - 1);
+  });
+})();

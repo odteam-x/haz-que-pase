@@ -357,29 +357,53 @@
 
 <!-- ══ VIII. NÁTALY ══════════════════════════════════════ -->
 <section class="sec" id="sec-nataly">
-  <div class="bg-streaks"></div>
-  <div class="bg-streaks-3"></div>
-  <div class="bg-glow"></div>
-  <div class="bg-glow-r"></div>
+  <div class="nat-bg">
+    <div class="nat-orb nat-orb-a"></div>
+    <div class="nat-orb nat-orb-b"></div>
+    <div class="nat-orb nat-orb-c"></div>
+    <div class="nat-grid-lines"></div>
+  </div>
   <div class="wrap">
-    <div class="nat-grid">
-      <div class="rv">
-        <div class="nat-frame">
-          <img
-            src="nataly.jpg"
-            alt="Nátaly Raposo"
-            onerror="this.parentElement.innerHTML='<div class=nat-frame-empty><i class=ri-user-line></i><span>nataly.jpg</span></div>'"
-          />
+
+    <!-- Header image -->
+    <div class="nat-header rv">
+      <img src="nataly-texto.png" alt="Nátaly Raposo" class="nat-header-img"/>
+    </div>
+
+    <!-- Gallery -->
+    <div class="nat-gallery rv d1">
+      <div class="nat-gallery-stage">
+        <img id="natGalleryImg" src="1.jpeg" alt="Nátaly Raposo foto 1"/>
+
+        <!-- Prev / Next arrows -->
+        <button class="nat-arrow nat-prev" id="natPrev" aria-label="Anterior">
+          <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <button class="nat-arrow nat-next" id="natNext" aria-label="Siguiente">
+          <i class="ri-arrow-right-s-line"></i>
+        </button>
+
+        <!-- Counter -->
+        <div class="nat-counter">
+          <span id="natCurrent">1</span><span class="nat-sep">/</span><span>10</span>
         </div>
       </div>
-      <div class="rv d2">
-        <div class="eye lt">La Candidata</div>
-        <img src="nataly-texto.png" alt="Nátaly Raposo" class="nat-name-img"/>
-        <div class="bar gd"></div>
-        <p class="nat-bio">Esta sección está próximamente disponible y presentará la trayectoria, formación y motivaciones de Nátaly como candidata al cargo de Convenor del V Campeonato Nacional de Debate.</p>
-        <div class="nat-pend"><i class="ri-time-line"></i> Contenido próximamente</div>
+
+      <!-- Dot indicators -->
+      <div class="nat-dots" id="natDots">
+        <button class="nat-dot active" data-i="0"></button>
+        <button class="nat-dot" data-i="1"></button>
+        <button class="nat-dot" data-i="2"></button>
+        <button class="nat-dot" data-i="3"></button>
+        <button class="nat-dot" data-i="4"></button>
+        <button class="nat-dot" data-i="5"></button>
+        <button class="nat-dot" data-i="6"></button>
+        <button class="nat-dot" data-i="7"></button>
+        <button class="nat-dot" data-i="8"></button>
+        <button class="nat-dot" data-i="9"></button>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -391,7 +415,7 @@
     <h2 class="t-sec rv d1">Documentos de<br/><em>Referencia</em></h2>
     <div class="bar rv d2"></div>
     <div class="docs-grid rv">
-      <a class="doc" href="https://drive.google.com/file/d/1FNWIumlaDI3mJf0Yf4VO4RJUiuM3jXmv/view?usp=drive_link" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC Kenia 2026</div><div class="doc-sub">Documento de candidatura</div></div></a>
+      <a class="doc" href="BID-Kenia.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC Kenia 2026</div><div class="doc-sub">Documento de candidatura</div></div></a>
       <a class="doc" href="BID-WSDC-2023.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC 2023</div><div class="doc-sub">Documento de referencia</div></div></a>
       <a class="doc" href="Reglamento.pdf" target="_blank"><div class="doc-ico"><i class="ri-file-list-3-line"></i></div><div><div class="doc-tit">Reglamento</div><div class="doc-sub">Reglamento oficial del CND</div></div></a>
       <a class="doc" href="BID-WSDC-2024.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC 2024</div><div class="doc-sub">Documento de referencia</div></div></a>
@@ -406,7 +430,7 @@
     <div class="ft-logo"><img src="logo.png" alt="Haz Que Pase"/></div>
     <div class="ft-copy">
       Campaña de Nátaly Raposo · Candidata a Convenor del V CND<br/>
-      Todos los derechos reservados © 2026
+      Programa de Liderazgo Estudiantil · República Dominicana · 2025
     </div>
   </div>
   <div class="ft-line"></div>
