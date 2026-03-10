@@ -162,13 +162,13 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
 .eye.gd::before { background: var(--gold-l); }
 
 .t-sec {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', sans-serif;
   font-weight: 900;
   font-size: clamp(2.8rem, 5.5vw, 5.4rem);
   line-height: .95; letter-spacing: -.025em;
   color: var(--ink);
 }
-.t-sec em { font-style: italic; color: var(--p3); }
+.t-sec em { font-style: normal; font-weight: 900; color: var(--p3); }
 .t-sec.dk { color: white; }
 .t-sec.dk em { color: var(--p1); }
 
@@ -528,9 +528,9 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
 .hqp-logo { display: block; max-width: 260px; height: auto; margin-bottom: 2rem; }
 .hqp-quote { border-left: 3px solid var(--gold); padding-left: 1.5rem; margin: 2rem 0; }
 .hqp-quote p {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(1.2rem, 1.7vw, 1.5rem);
-  font-style: italic; color: rgba(255,255,255,.85); line-height: 1.5;
+  font-style: normal; font-weight: 600; color: rgba(255,255,255,.85); line-height: 1.5;
 }
 .hqp-cards { display: flex; flex-direction: column; gap: 1rem; }
 .hqp-card {
@@ -548,7 +548,7 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .hqp-icon i { font-size: 1.15rem; color: var(--p1); }
-.hqp-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: white; margin-bottom: .3rem; }
+.hqp-card h4 { font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: white; margin-bottom: .3rem; }
 .hqp-card p  { font-size: .83rem; color: rgba(255,255,255,.5); line-height: 1.6; }
 .hqp-vid {
   display: inline-flex; align-items: center; gap: .8rem; margin-top: 2rem;
@@ -575,14 +575,14 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
 .conv-stat:hover { transform: translateY(-4px); box-shadow: 0 14px 38px rgba(151,90,182,.1); }
 .cs-ico { width: 36px; height: 36px; border-radius: 8px; background: var(--mist); display: flex; align-items: center; justify-content: center; margin-bottom: .8rem; }
 .cs-ico i { font-size: 1.05rem; color: var(--p3); }
-.cs-val { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 900; color: var(--ink2); line-height: 1; }
+.cs-val { font-family: 'Outfit', sans-serif; font-size: 1.55rem; font-weight: 900; color: var(--ink2); line-height: 1; }
 .cs-lbl { font-size: .73rem; color: var(--soft); margin-top: .28rem; line-height: 1.4; }
 .conv-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
 .conv-card { background: white; border: 1px solid rgba(151,90,182,.09); border-radius: 18px; padding: 2rem; position: relative; overflow: hidden; transition: all .3s; }
 .conv-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--p3), var(--p1)); opacity: 0; transition: opacity .3s; }
 .conv-card:hover { transform: translateY(-5px); box-shadow: 0 22px 55px rgba(26,8,48,.09); }
 .conv-card:hover::after { opacity: 1; }
-.cc-n { font-family: 'Playfair Display', serif; font-size: 3.6rem; font-weight: 900; color: var(--mist); line-height: 1; margin-bottom: .8rem; }
+.cc-n { font-family: 'Outfit', sans-serif; font-size: 3.6rem; font-weight: 900; color: var(--mist); line-height: 1; margin-bottom: .8rem; }
 .conv-card p { font-size: .87rem; line-height: 1.75; color: var(--body); }
 .conv-card p strong { color: var(--ink); font-weight: 600; }
 @media (max-width: 1024px) { .conv-cards { grid-template-columns: 1fr 1fr; } }
@@ -600,7 +600,7 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
 .rg-ico.am   { background: rgba(201,144,74,.12); }
 .rg-ico.am i { color: var(--gold); }
 .rg-ico i    { font-size: 1.05rem; }
-.rg-head h3  { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+.rg-head h3  { font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 700; color: var(--ink); }
 .reto-row { display: flex; align-items: flex-start; gap: .9rem; padding: 1rem 0; border-bottom: 1px solid rgba(151,90,182,.09); transition: padding-left .2s; }
 .reto-row:last-child { border-bottom: none; }
 .reto-row:hover { padding-left: .4rem; }
@@ -628,7 +628,7 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
 .ph-logo { display: block; max-width: 240px; height: auto; margin-bottom: .5rem; }
 .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .p-grp h3 {
-  font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700;
+  font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700;
   color: white; display: flex; align-items: center; gap: .7rem;
   margin-bottom: 1.1rem; padding-bottom: .8rem; border-bottom: 1px solid rgba(255,255,255,.1);
 }
@@ -660,7 +660,7 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
   padding: .3rem .85rem; border-radius: 100px; margin-bottom: 1.1rem;
 }
 .tc-tag i { font-size: .8rem; }
-.t-card h3 { font-family: 'Playfair Display', serif; font-size: clamp(1.15rem, 1.9vw, 1.45rem); font-weight: 700; line-height: 1.3; margin-bottom: .9rem; }
+.t-card h3 { font-family: 'Outfit', sans-serif; font-size: clamp(1.15rem, 1.9vw, 1.45rem); font-weight: 700; line-height: 1.3; margin-bottom: .9rem; }
 .t-dark h3  { color: white; }
 .t-light h3 { color: var(--ink); }
 .t-dark p   { font-size: .89rem; line-height: 1.8; color: rgba(255,255,255,.6); }
@@ -689,7 +689,7 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
   padding: .28rem .7rem; border-radius: 100px; border: 1px solid rgba(255,255,255,.12);
 }
 .resp-big-body { padding: 1.8rem 2rem 2rem; flex: 1; }
-.resp-big-name { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--ink); margin-bottom: .3rem; }
+.resp-big-name { font-family: 'Outfit', sans-serif; font-size: 1.35rem; font-weight: 700; color: var(--ink); margin-bottom: .3rem; }
 .resp-big-role { font-size: .7rem; color: var(--p3); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1rem; line-height: 1.6; }
 .resp-big-tag {
   display: inline-flex; align-items: center; gap: .4rem;
@@ -702,7 +702,7 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
 .resp-small-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 .resp-small { background: white; border: 1px solid rgba(151,90,182,.09); border-radius: 16px; padding: 1.8rem 2rem; transition: all .3s; }
 .resp-small:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(26,8,48,.08); }
-.resp-small-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--ink); margin-bottom: .28rem; }
+.resp-small-name { font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--ink); margin-bottom: .28rem; }
 .resp-small-role { font-size: .68rem; color: var(--p3); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .8rem; line-height: 1.5; }
 .resp-small-desc { font-size: .83rem; line-height: 1.65; color: var(--soft); }
 .resp-small-icon { width: 38px; height: 38px; border-radius: 10px; background: var(--mist); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
@@ -731,7 +731,7 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
   padding: .48rem 1.2rem; border-radius: 100px; margin-top: 1.5rem;
 }
 .nat-pend i { font-size: .88rem; }
-.nat-bio { font-family: 'Playfair Display', serif; font-size: clamp(1rem, 1.3vw, 1.15rem); font-style: italic; font-weight: 300; color: rgba(255,255,255,.52); line-height: 1.8; }
+.nat-bio { font-family: 'Outfit', sans-serif; font-size: clamp(1rem, 1.3vw, 1.15rem); font-style: normal; font-weight: 300; color: rgba(255,255,255,.52); line-height: 1.8; }
 .nat-name-img { display: block; max-width: 340px; height: auto; margin-bottom: 1rem; }
 @media (max-width: 900px) {
   .nat-grid { grid-template-columns: 1fr; gap: 2.5rem; }
