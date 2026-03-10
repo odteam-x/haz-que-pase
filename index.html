@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Haz Que Pase – V CND</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div id="cur"></div>
+<div id="curR"></div>
+
+<!-- ══ MOBILE MENU ═══════════════════════════════════════ -->
+<div class="mob-menu" id="mobMenu">
+  <a href="#sec-hero"  onclick="closeMob()">Inicio</a>
+  <div class="mob-divider"></div>
+  <a href="#sec-hqp"   onclick="closeMob()">Haz Que Pase</a>
+  <a href="#sec-conv"  onclick="closeMob()">Convenor</a>
+  <a href="#sec-retos" onclick="closeMob()">Retos</a>
+  <a href="#sec-prop"  onclick="closeMob()">Propuestas</a>
+  <a href="#sec-resp"  onclick="closeMob()">Respaldo</a>
+  <div class="mob-divider"></div>
+  <a href="#sec-docs"  onclick="closeMob()">Documentos</a>
+</div>
+
+<!-- ══ NAV ════════════════════════════════════════════════ -->
+<nav id="mainNav">
+  <a href="#sec-hero" class="nav-logo">
+    <img src="logo.png" alt="Haz Que Pase"/>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sec-hqp">El Proyecto</a></li>
+    <li><a href="#sec-conv">Convenor</a></li>
+    <li><a href="#sec-retos">Retos</a></li>
+    <li><a href="#sec-prop">Propuestas</a></li>
+    <li><a href="#sec-resp">Respaldo</a></li>
+    <li><a href="#sec-docs" class="nav-cta">Ver Manual</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ I. HERO ════════════════════════════════════════════ -->
+<section class="sec" id="sec-hero">
+  <div class="aurora"></div>
+  <canvas id="hero-canvas"></canvas>
+  <div class="wrap">
+    <div class="hero-grid">
+
+      <div class="rv">
+        <div class="hero-meta">
+          <div class="hero-meta-ln"></div>
+          <span>V Campeonato Nacional de Debate</span>
+        </div>
+        <img src="nataly-texto.png" alt="Nátaly Raposo" class="hero-name-img"/>
+        <p class="hero-sub">Candidata a Convenor &nbsp;·&nbsp; CND 2025</p>
+        <p class="hero-tag">
+          La transición del CND al formato <strong>World Schools</strong> es una oportunidad
+          histórica para el debate dominicano. Este proyecto propone cómo hacerlo bien.
+        </p>
+        <div class="hero-btns">
+          <a href="#sec-docs" class="btn btn-p"><i class="ri-file-text-line"></i> Ver Manual de Propuestas</a>
+          <a href="#sec-hqp"  class="btn btn-out"><i class="ri-arrow-down-line"></i> Conoce el proyecto</a>
+        </div>
+      </div>
+
+      <div class="hero-img-col rv d2">
+        <div class="hero-frame">
+          <img
+            src="nataly.jpg"
+            alt="Nátaly Raposo"
+            onerror="this.parentElement.innerHTML='<div class=hero-frame-empty><i class=ri-user-line></i><span>nataly.jpg</span></div>'"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><i class="ri-arrow-down-s-line"></i></div>
+</section>
+
+<!-- ══ II. HAZ QUE PASE ══════════════════════════════════ -->
+<section class="sec" id="sec-hqp">
+  <div class="bg-bands"></div>
+  <div class="bg-bands-orb2"></div>
+  <div class="wrap">
+    <div class="hqp-grid">
+
+      <div class="rv">
+        <div class="eye lt">El Proyecto</div>
+        <img src="hqp.png" alt="Haz Que Pase" class="hqp-logo"/>
+        <div class="hqp-quote">
+          <p>"Construir el campeonato que cada persona necesita para vivir el mejor CND posible."</p>
+        </div>
+        <div class="prose dk">
+          <p>Las campañas suelen definir una identidad única para un evento. Sin embargo, un campeonato de debate no se vive de una sola manera.</p>
+          <p>Haz Que Pase nace de reconocer esa diversidad de expectativas. No busca imponer una única forma de vivir el campeonato, sino diseñarlo de manera que pueda responder a las distintas necesidades de quienes participan en él.</p>
+          <p>Un campeonato no se define por una sola idea. Se construye cuando su diseño permite que muchas visiones coexistan.</p>
+        </div>
+        <a href="https://www.instagram.com/reel/DVj_OyoDuNL/" target="_blank" class="hqp-vid">
+          <div class="play-dot"><i class="ri-play-fill"></i></div>
+          Ver video en Instagram
+        </a>
+      </div>
+
+      <div class="rv d2">
+        <div class="hqp-cards">
+          <div class="hqp-card">
+            <div class="hqp-icon"><i class="ri-trophy-line"></i></div>
+            <div>
+              <h4>La visión competitiva</h4>
+              <p>Para algunos, el CND ideal es una competencia exigente donde puedan aspirar al break y medir su nivel frente a los mejores equipos.</p>
+            </div>
+          </div>
+          <div class="hqp-card">
+            <div class="hqp-icon"><i class="ri-book-open-line"></i></div>
+            <div>
+              <h4>El espacio de aprendizaje</h4>
+              <p>Para otros, significa un espacio de formación, crecimiento y desarrollo académico genuino.</p>
+            </div>
+          </div>
+          <div class="hqp-card">
+            <div class="hqp-icon"><i class="ri-scales-3-line"></i></div>
+            <div>
+              <h4>La confianza en el proceso</h4>
+              <p>También están quienes necesitan confiar en la organización, la justicia del proceso de adjudicación y el cumplimiento de la agenda.</p>
+            </div>
+          </div>
+          <div class="hqp-card" style="border-color:rgba(201,144,74,.22); background:rgba(201,144,74,.05)">
+            <div class="hqp-icon" style="background:rgba(201,144,74,.14); border-color:rgba(201,144,74,.22)">
+              <i class="ri-sparkling-2-line" style="color:var(--gold-l)"></i>
+            </div>
+            <div>
+              <h4>Todas las visiones coexisten</h4>
+              <p>Haz Que Pase es una invitación abierta: un sistema donde muchas expectativas distintas encuentran su lugar al mismo tiempo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ III. CONVENOR ═════════════════════════════════════ -->
+<section class="sec" id="sec-conv">
+  <div class="bg-dots"></div>
+  <div class="wrap">
+    <div class="eye rv">El Rol</div>
+    <h2 class="t-sec rv d1">¿Qué es un<br/><em>Convenor?</em></h2>
+    <div class="bar rv d2"></div>
+
+    <div class="conv-top">
+      <div class="prose rv">
+        <p>El Convenor es la persona responsable de la organización general del campeonato y de garantizar que el evento se desarrolle conforme a los estándares del World Schools Debating Championship (WSDC). Su función principal consiste en diseñar, coordinar y supervisar la estructura operativa del torneo, asegurando que los distintos componentes funcionen de manera integrada.</p>
+        <p>Trabaja en coordinación con el Chief Adjudication Panel (CAP), órgano responsable de los aspectos académicos. Mientras el CAP se encarga de la calidad técnica del debate, el Convenor asegura que el campeonato cuente con las condiciones organizativas para un torneo ordenado, justo y eficiente.</p>
+      </div>
+      <div class="conv-stats rv d2">
+        <div class="conv-stat"><div class="cs-ico"><i class="ri-global-line"></i></div><div class="cs-val">WSDC</div><div class="cs-lbl">Estándar internacional del formato</div></div>
+        <div class="conv-stat"><div class="cs-ico"><i class="ri-team-line"></i></div><div class="cs-val">CAP</div><div class="cs-lbl">Coordinación con panel de adjudicación</div></div>
+        <div class="conv-stat"><div class="cs-ico"><i class="ri-compass-3-line"></i></div><div class="cs-val">360°</div><div class="cs-lbl">Supervisión de toda la estructura</div></div>
+        <div class="conv-stat"><div class="cs-ico"><i class="ri-medal-line"></i></div><div class="cs-val">V</div><div class="cs-lbl">Edición del Campeonato Nacional</div></div>
+      </div>
+    </div>
+
+    <div class="conv-cards rv">
+      <div class="conv-card">
+        <div class="cc-n">01</div>
+        <p>Lidera la <strong>planificación del evento</strong>, supervisa la agenda oficial y coordina al equipo organizador: gestión de espacios, manejo del tiempo y movilidad interna.</p>
+      </div>
+      <div class="conv-card">
+        <div class="cc-n">02</div>
+        <p>Organiza los <strong>procesos formativos previos</strong> al campeonato, preparando a debatientes, jueces y coaches en el formato WSDC para fortalecer la calidad académica del torneo.</p>
+      </div>
+      <div class="conv-card">
+        <div class="cc-n">03</div>
+        <p>Garantiza que el campeonato se alinee con los <strong>estándares internacionales del circuito</strong> WSDC, promoviendo excelencia académica y desarrollo sostenible del debate escolar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ IV. RETOS ══════════════════════════════════════════ -->
+<section class="sec" id="sec-retos">
+  <div class="bg-sweep"></div>
+  <div class="wrap">
+    <div class="eye rv">Los Desafíos</div>
+    <h2 class="t-sec rv d1">Retos del<br/><em>CND</em></h2>
+    <div class="bar rv d2"></div>
+    <div class="retos-lead prose rv">
+      <p>La transición del CND hacia el formato WSDC plantea retos claros que debemos abordar de manera estratégica. Reconocerlos con precisión es el primer paso para resolverlos bien.</p>
+    </div>
+
+    <div class="retos-cols rv">
+      <div>
+        <div class="rg-head"><div class="rg-ico pu"><i class="ri-graduation-cap-line"></i></div><h3>Retos Académicos</h3></div>
+        <div class="reto-row"><div class="r-ico pu"><i class="ri-bar-chart-grouped-line"></i></div><p>Baja asistencia a los talleres en el mediano y largo plazo.</p></div>
+        <div class="reto-row"><div class="r-ico pu"><i class="ri-user-star-line"></i></div><p>Experiencia de las personas juezas y coaches en el nuevo formato.</p></div>
+        <div class="reto-row"><div class="r-ico pu"><i class="ri-door-open-line"></i></div><p>Abandono de los equipos durante el proceso formativo.</p></div>
+      </div>
+      <div>
+        <div class="rg-head"><div class="rg-ico am"><i class="ri-settings-3-line"></i></div><h3>Retos Logísticos</h3></div>
+        <div class="reto-row"><div class="r-ico am"><i class="ri-bus-line"></i></div><p>Transportación y movilidad efectiva entre sedes y participantes.</p></div>
+        <div class="reto-row"><div class="r-ico am"><i class="ri-time-line"></i></div><p>Manejo del tiempo y ejecución de la agenda durante el campeonato.</p></div>
+        <div class="reto-row"><div class="r-ico am"><i class="ri-group-line"></i></div><p>Manejo, convivencia y eficiencia del Staff Logístico.</p></div>
+      </div>
+    </div>
+
+    <div class="rv" style="text-align:center; margin-top:3.5rem;">
+      <a href="#sec-docs" class="btn btn-dark"><i class="ri-file-text-line"></i> Ver manual de propuestas</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ V. PROPUESTAS ═════════════════════════════════════ -->
+<section class="sec" id="sec-prop">
+  <div class="bg-mesh"></div>
+  <div class="bg-mesh-mid"></div>
+  <div class="wrap">
+    <div class="ph">
+      <div class="rv">
+        <div class="eye gd">Las Soluciones</div>
+        <img src="hqp.png" alt="HQP" class="ph-logo"/>
+        <h2 class="t-sec dk" style="font-size:clamp(2rem,4vw,3.8rem)">Propuestas<br/><em>del Campeonato</em></h2>
+        <div class="bar gd"></div>
+      </div>
+      <div class="rv d2">
+        <p>Las propuestas responden directamente a los retos académicos y logísticos identificados en el proceso de transición del CND hacia el formato WSDC.</p>
+        <a href="#sec-docs">Consultar Manual de Propuestas completo <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </div>
+
+    <div class="p-grid rv">
+      <div class="p-grp">
+        <h3><i class="ri-graduation-cap-line"></i> Propuestas Académicas</h3>
+        <div class="p-list">
+          <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Equipos Académicos de Formación</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Sistema Escalonado de Seguimiento</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Alternativas Complementarias de Formación</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Estrategia de Normalización del Aprendizaje (ENA)</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Coaches Evaluadores</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Sistema de Seguimiento Emocional (SSE)</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Incentivos de Permanencia</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Plan de Identidad Regional</span></div>
+        </div>
+      </div>
+      <div class="p-grp">
+        <h3><i class="ri-settings-3-line"></i> Propuestas Logísticas</h3>
+        <div class="p-list">
+          <div class="p-item"><div class="p-ico"><i class="ri-qr-code-line"></i></div><span>Tab Guys – Check-In Inteligente con QR</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-map-pin-line"></i></div><span>Mapeo Humano y Señalización Estratégica</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-car-line"></i></div><span>Sistema de Supervisión de Movilidad</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-calendar-event-line"></i></div><span>Agenda Oficial del V CND</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-git-branch-line"></i></div><span>Agenda Alternativa (Plan B Logístico)</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-route-line"></i></div><span>Ruta Logística Diaria</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-team-line"></i></div><span>Proceso Formativo para el Staff</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-database-2-line"></i></div><span>Cultura de Conocimiento Institucional</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-organization-chart"></i></div><span>Estructura Unificada y Especializada</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VI. TRANSICIÓN ════════════════════════════════════ -->
+<section class="sec" id="sec-trans">
+  <div class="blob-wrap"></div>
+  <div class="blob-wrap-c"></div>
+  <div class="wrap">
+    <div class="eye rv">El Contexto</div>
+    <h2 class="t-sec rv d1">Transición al<br/><em>formato WSDC</em></h2>
+    <div class="bar rv d2"></div>
+    <div class="trans-grid rv">
+      <div class="t-card t-dark">
+        <div class="tc-tag"><i class="ri-global-line"></i> Contexto</div>
+        <h3>Un paso importante para el debate escolar dominicano</h3>
+        <p>La transición del CND hacia el formato WSDC implica retos académicos, logísticos y organizativos que requieren una planificación cuidadosa: desde la formación de jueces y coaches en el nuevo formato, hasta la adaptación de la estructura competitiva y la agenda del campeonato.</p>
+      </div>
+      <div class="t-card t-light">
+        <div class="tc-tag"><i class="ri-flag-line"></i> Hito histórico</div>
+        <h3>República Dominicana en el circuito internacional</h3>
+        <p>Esta transición abre una oportunidad histórica para fortalecer la calidad del CND. Por primera vez, la República Dominicana contará con una delegación que representará al país en <strong>WSDC 2026 en Kenia</strong>, marcando el inicio de una nueva etapa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VII. RESPALDO ═════════════════════════════════════ -->
+<section class="sec" id="sec-resp">
+  <div class="bg-rings"><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="eye rv">Avales</div>
+    <h2 class="t-sec rv d1">Respaldo<br/><em>Internacional</em></h2>
+    <div class="bar rv d2"></div>
+    <div class="resp-intro prose rv">
+      <p>Como parte de la construcción de esta candidatura, se ha contado con el acompañamiento y retroalimentación de personas con experiencia directa en el circuito WSDC. Su orientación ha permitido fortalecer el diseño académico y logístico de las propuestas, asegurando que la transición se plantee alineada con los estándares del circuito internacional.</p>
+    </div>
+
+    <!-- Featured – Rok + Loke -->
+    <div class="resp-featured rv">
+      <div class="resp-big">
+        <div class="resp-big-photo">
+          <img src="rok.png" alt="Rok Hafner" onerror="this.style.display='none'"/>
+          <div class="resp-big-photo-label"><i class="ri-video-chat-line"></i> Reunión de asesoría</div>
+        </div>
+        <div class="resp-big-body">
+          <div class="resp-big-tag"><i class="ri-star-line"></i> Asesor Académico</div>
+          <div class="resp-big-name">Rok Hafner</div>
+          <div class="resp-big-role">Chief Adjudicator – WSDC Serbia 2024<br/>Director – ZiP Debate Organization (Slovenia)</div>
+          <p class="resp-big-desc">Acompañamiento en la revisión de la estructura académica de las propuestas, incluyendo estándares de adjudicación, formación de jueces y organización del componente académico del campeonato bajo formato WSDC.</p>
+        </div>
+      </div>
+      <div class="resp-big">
+        <div class="resp-big-photo">
+          <img src="loke.png" alt="Loke Wing Fatt" onerror="this.style.display='none'"/>
+          <div class="resp-big-photo-label"><i class="ri-video-chat-line"></i> Reunión de asesoría</div>
+        </div>
+        <div class="resp-big-body">
+          <div class="resp-big-tag"><i class="ri-earth-line"></i> Articulación Internacional</div>
+          <div class="resp-big-name">Loke Wing Fatt</div>
+          <div class="resp-big-role">Convenor – WSDC Vietnam 2023 & Macau 2021<br/>President – SAID · Pioneer WSDC China</div>
+          <p class="resp-big-desc">Recomendaciones sobre estructura competitiva, cantidad de rondas y conexión con coaches internacionales hispanohablantes que puedan colaborar en procesos de capacitación durante el desarrollo del CND.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Small – Scott + Anastazija -->
+    <div class="resp-small-grid rv d2">
+      <div class="resp-small">
+        <div class="resp-small-icon"><i class="ri-scales-3-line"></i></div>
+        <div class="resp-small-name">Scott Ralston</div>
+        <div class="resp-small-role">Chief Adjudicator – WSDC Bangkok 2019</div>
+        <p class="resp-small-desc">Intercambio de recomendaciones sobre estándares internacionales de adjudicación y organización de campeonatos bajo el formato WSDC.</p>
+      </div>
+      <div class="resp-small">
+        <div class="resp-small-icon"><i class="ri-building-line"></i></div>
+        <div class="resp-small-name">Anastazija Stupar</div>
+        <div class="resp-small-role">Convenor – WSDC Netherlands 2022<br/>Convenor – WSDC Zagreb, Croatia 2018</div>
+        <p class="resp-small-desc">Orientaciones sobre la organización bajo formato WSDC y apoyo en la conexión con personas y organizaciones internacionales vinculadas al debate escolar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VIII. NÁTALY ══════════════════════════════════════ -->
+<section class="sec" id="sec-nataly">
+  <div class="bg-streaks"></div>
+  <div class="bg-streaks-3"></div>
+  <div class="bg-glow"></div>
+  <div class="bg-glow-r"></div>
+  <div class="wrap">
+    <div class="nat-grid">
+      <div class="rv">
+        <div class="nat-frame">
+          <img
+            src="nataly.jpg"
+            alt="Nátaly Raposo"
+            onerror="this.parentElement.innerHTML='<div class=nat-frame-empty><i class=ri-user-line></i><span>nataly.jpg</span></div>'"
+          />
+        </div>
+      </div>
+      <div class="rv d2">
+        <div class="eye lt">La Candidata</div>
+        <img src="nataly-texto.png" alt="Nátaly Raposo" class="nat-name-img"/>
+        <div class="bar gd"></div>
+        <p class="nat-bio">Esta sección está próximamente disponible y presentará la trayectoria, formación y motivaciones de Nátaly como candidata al cargo de Convenor del V Campeonato Nacional de Debate.</p>
+        <div class="nat-pend"><i class="ri-time-line"></i> Contenido próximamente</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ IX. DOCUMENTOS ════════════════════════════════════ -->
+<section class="sec" id="sec-docs">
+  <div class="bg-geo"><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="eye rv">Recursos</div>
+    <h2 class="t-sec rv d1">Documentos de<br/><em>Referencia</em></h2>
+    <div class="bar rv d2"></div>
+    <div class="docs-grid rv">
+      <a class="doc" href="https://drive.google.com/file/d/1FNWIumlaDI3mJf0Yf4VO4RJUiuM3jXmv/view?usp=drive_link" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC Kenia 2026</div><div class="doc-sub">Documento de candidatura</div></div></a>
+      <a class="doc" href="BID-WSDC-2023.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC 2023</div><div class="doc-sub">Documento de referencia</div></div></a>
+      <a class="doc" href="Reglamento.pdf" target="_blank"><div class="doc-ico"><i class="ri-file-list-3-line"></i></div><div><div class="doc-tit">Reglamento</div><div class="doc-sub">Reglamento oficial del CND</div></div></a>
+      <a class="doc" href="BID-WSDC-2024.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC 2024</div><div class="doc-sub">Documento de referencia</div></div></a>
+      <a class="doc" href="BID-WSDC-2025.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC 2025</div><div class="doc-sub">Documento de referencia</div></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═════════════════════════════════════════════ -->
+<footer>
+  <div class="ft">
+    <div class="ft-logo"><img src="logo.png" alt="Haz Que Pase"/></div>
+    <div class="ft-copy">
+      Campaña de Nátaly Raposo · Candidata a Convenor del V CND<br/>
+      Todos los derechos reservados © 2026
+    </div>
+  </div>
+  <div class="ft-line"></div>
+</footer>
+
+<!-- Scripts -->
+<script src="app.js"></script>
+
+</body>
+</html>
