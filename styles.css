@@ -236,21 +236,31 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
    DYNAMIC BACKGROUNDS – vivid & animated
 ══════════════════════════════════════════════════ */
 
-/* HERO */
-#sec-hero { min-height: 100svh; background: var(--ink); }
+/* HERO – deep teal-indigo, distinct from Nataly's orb bg */
+#sec-hero { min-height: 100svh; background: #060c1a; }
 #hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
-.aurora {
+
+.hero-aurora-new {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 75% 65% at 78% 14%, rgba(151,90,182,.75) 0%, transparent 55%),
-    radial-gradient(ellipse 55% 70% at 10% 85%, rgba(61,24,102,.85)  0%, transparent 55%),
-    radial-gradient(ellipse 45% 45% at 50% 48%, rgba(223,176,246,.18) 0%, transparent 65%);
-  animation: aur 10s ease-in-out infinite alternate;
+    radial-gradient(ellipse 70% 60% at 85% 10%, rgba(20,90,160,.75) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 65% at 5% 80%,  rgba(10,50,120,.9)  0%, transparent 55%),
+    radial-gradient(ellipse 40% 50% at 45% 50%, rgba(80,160,230,.12) 0%, transparent 65%);
+  animation: aur-new 11s ease-in-out infinite alternate;
 }
-@keyframes aur {
+@keyframes aur-new {
   0%   { transform: scale(1)    translate(0,0); }
-  50%  { transform: scale(1.05) translate(-8px, 12px); }
-  100% { transform: scale(1.03) translate(-18px, 6px); }
+  50%  { transform: scale(1.06) translate(-10px, 14px); }
+  100% { transform: scale(1.03) translate(-20px, 5px); }
+}
+/* subtle grid mesh overlay */
+.hero-mesh {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(80,160,230,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80,160,230,.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: .6;
 }
 
 /* HQP – vivid diagonal bands + two animated orbs */
@@ -569,21 +579,78 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
 .hqp-icon i { font-size: 1.15rem; color: var(--p1); }
 .hqp-card h4 { font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: white; margin-bottom: .3rem; }
 .hqp-card p  { font-size: .83rem; color: rgba(255,255,255,.5); line-height: 1.6; }
+.hqp-links { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
 .hqp-vid {
-  display: inline-flex; align-items: center; gap: .8rem; margin-top: 2rem;
+  display: inline-flex; align-items: center; gap: .8rem;
   background: rgba(201,144,74,.08); border: 1px solid rgba(201,144,74,.3);
   color: var(--gold-l); padding: .76rem 1.5rem; border-radius: 100px;
   font-size: .8rem; font-weight: 500; letter-spacing: .05em;
   text-decoration: none; transition: all .25s;
 }
 .hqp-vid:hover { background: rgba(201,144,74,.15); }
+.hqp-wa {
+  background: rgba(37,211,102,.08); border-color: rgba(37,211,102,.35);
+  color: #7de8a8;
+}
+.hqp-wa:hover { background: rgba(37,211,102,.16); }
 .play-dot {
   width: 28px; height: 28px; border-radius: 50%;
   background: var(--gold); display: flex;
   align-items: center; justify-content: center; flex-shrink: 0;
 }
 .play-dot i { font-size: .85rem; color: var(--ink); margin-left: 2px; }
+.wa-dot { background: #25d366; }
+.wa-dot i { margin-left: 0; }
 @media (max-width: 900px) { .hqp-grid { grid-template-columns: 1fr; gap: 3rem; } }
+
+/* ══════════════════════════════════════════════════
+   CARRUSEL FOTOS
+══════════════════════════════════════════════════ */
+.reel-section {
+  position: relative;
+  background: var(--ink2);
+  padding: 2.2rem 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(223,176,246,.08);
+  border-bottom: 1px solid rgba(223,176,246,.08);
+}
+.reel-track-wrap { overflow: hidden; }
+.reel-track {
+  display: flex; align-items: center; gap: .9rem;
+  width: max-content;
+  animation: reel-scroll 38s linear infinite;
+}
+.reel-track:hover { animation-play-state: paused; }
+@keyframes reel-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.reel-item {
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 3px solid rgba(223,176,246,.25);
+  box-shadow: 0 0 0 1px rgba(151,90,182,.2);
+  background: var(--ink3);
+  transition: border-color .3s, transform .3s;
+}
+.reel-item:hover { border-color: var(--p1); transform: scale(1.03); }
+.reel-item img {
+  height: 100%; width: auto;
+  display: block; object-fit: cover;
+}
+/* fade edges */
+.reel-fade-l, .reel-fade-r {
+  position: absolute; top: 0; bottom: 0; width: 120px; z-index: 2; pointer-events: none;
+}
+.reel-fade-l { left: 0;  background: linear-gradient(90deg, var(--ink2), transparent); }
+.reel-fade-r { right: 0; background: linear-gradient(-90deg, var(--ink2), transparent); }
+@media (max-width: 600px) {
+  .reel-item { height: 140px; border-radius: 10px; }
+  .reel-fade-l, .reel-fade-r { width: 50px; }
+}
+
 
 /* ══════════════════════════════════════════════════
    CONVENOR

@@ -4,21 +4,14 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Haz Que Pase – V CND</title>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-
-  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-<!-- Custom Cursor -->
 <div id="cur"></div>
 <div id="curR"></div>
 
@@ -55,11 +48,11 @@
 
 <!-- ══ I. HERO ════════════════════════════════════════════ -->
 <section class="sec" id="sec-hero">
-  <div class="aurora"></div>
+  <div class="hero-aurora-new"></div>
+  <div class="hero-mesh"></div>
   <canvas id="hero-canvas"></canvas>
   <div class="wrap">
     <div class="hero-grid">
-
       <div class="rv">
         <div class="hero-meta">
           <div class="hero-meta-ln"></div>
@@ -76,21 +69,54 @@
           <a href="#sec-hqp"  class="btn btn-out"><i class="ri-arrow-down-line"></i> Conoce el proyecto</a>
         </div>
       </div>
-
       <div class="hero-img-col rv d2">
         <div class="hero-frame">
-          <img
-            src="nataly.jpg"
-            alt="Nátaly Raposo"
-            onerror="this.parentElement.innerHTML='<div class=hero-frame-empty><i class=ri-user-line></i><span>nataly.jpg</span></div>'"
-          />
+          <img src="nataly.jpg" alt="Nátaly Raposo"
+            onerror="this.parentElement.innerHTML='<div class=hero-frame-empty><i class=ri-user-line></i><span>nataly.jpg</span></div>'"/>
         </div>
       </div>
-
     </div>
   </div>
   <div class="hero-scroll"><span>Scroll</span><i class="ri-arrow-down-s-line"></i></div>
 </section>
+
+<!-- ══ GALERÍA NÁTALY ════════════════════════════════════ -->
+<section class="sec" id="sec-nataly">
+  <div class="nat-bg">
+    <div class="nat-orb nat-orb-a"></div>
+    <div class="nat-orb nat-orb-b"></div>
+    <div class="nat-orb nat-orb-c"></div>
+    <div class="nat-grid-lines"></div>
+  </div>
+  <div class="wrap">
+    <div class="nat-header rv">
+      <img src="nataly-texto.png" alt="Nátaly Raposo" class="nat-header-img"/>
+    </div>
+    <div class="nat-gallery rv d1">
+      <div class="nat-gallery-stage">
+        <img id="natGalleryImg" src="1.jpeg" alt="Nátaly Raposo foto 1"/>
+        <button class="nat-arrow nat-prev" id="natPrev" aria-label="Anterior"><i class="ri-arrow-left-s-line"></i></button>
+        <button class="nat-arrow nat-next" id="natNext" aria-label="Siguiente"><i class="ri-arrow-right-s-line"></i></button>
+        <div class="nat-counter"><span id="natCurrent">1</span><span class="nat-sep">/</span><span>10</span></div>
+      </div>
+      <div class="nat-dots" id="natDots">
+        <button class="nat-dot active" data-i="0"></button>
+        <button class="nat-dot" data-i="1"></button>
+        <button class="nat-dot" data-i="2"></button>
+        <button class="nat-dot" data-i="3"></button>
+        <button class="nat-dot" data-i="4"></button>
+        <button class="nat-dot" data-i="5"></button>
+        <button class="nat-dot" data-i="6"></button>
+        <button class="nat-dot" data-i="7"></button>
+        <button class="nat-dot" data-i="8"></button>
+        <button class="nat-dot" data-i="9"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ I.B BIO ════════════════════════════════════════════ -->
+
 
 <!-- ══ II. HAZ QUE PASE ══════════════════════════════════ -->
 <section class="sec" id="sec-hqp">
@@ -98,7 +124,6 @@
   <div class="bg-bands-orb2"></div>
   <div class="wrap">
     <div class="hqp-grid">
-
       <div class="rv">
         <div class="eye lt">El Proyecto</div>
         <img src="hqp.png" alt="Haz Que Pase" class="hqp-logo"/>
@@ -110,12 +135,17 @@
           <p>Haz Que Pase nace de reconocer esa diversidad de expectativas. No busca imponer una única forma de vivir el campeonato, sino diseñarlo de manera que pueda responder a las distintas necesidades de quienes participan en él.</p>
           <p>Un campeonato no se define por una sola idea. Se construye cuando su diseño permite que muchas visiones coexistan.</p>
         </div>
-        <a href="https://www.instagram.com/reel/DVj_OyoDuNL/" target="_blank" class="hqp-vid">
-          <div class="play-dot"><i class="ri-play-fill"></i></div>
-          Ver video en Instagram
-        </a>
+        <div class="hqp-links">
+          <a href="https://www.instagram.com/reel/DVj_OyoDuNL/" target="_blank" class="hqp-vid">
+            <div class="play-dot"><i class="ri-play-fill"></i></div>
+            Ver video en Instagram
+          </a>
+          <a href="https://chat.whatsapp.com/H5Vw6Fu5kk07txdy9BjqHL?mode=hqctcli" target="_blank" class="hqp-vid hqp-wa">
+            <div class="play-dot wa-dot"><i class="ri-whatsapp-line"></i></div>
+            Haz Que Pase
+          </a>
+        </div>
       </div>
-
       <div class="rv d2">
         <div class="hqp-cards">
           <div class="hqp-card">
@@ -150,10 +180,39 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
+
+<!-- ══ CARRUSEL FOTOS ════════════════════════════════════ -->
+<div class="reel-section">
+  <div class="reel-fade-l"></div>
+  <div class="reel-fade-r"></div>
+  <div class="reel-track-wrap">
+    <div class="reel-track" id="reelTrack">
+      <div class="reel-item"><img src="11.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="12.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="13.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="14.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="15.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="16.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="17.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="18.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="19.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="20.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="11.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="12.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="13.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="14.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="15.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="16.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="17.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="18.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="19.jpeg" alt=""/></div>
+      <div class="reel-item"><img src="20.jpeg" alt=""/></div>
+    </div>
+  </div>
+</div>
 
 <!-- ══ III. CONVENOR ═════════════════════════════════════ -->
 <section class="sec" id="sec-conv">
@@ -162,7 +221,6 @@
     <div class="eye rv">El Rol</div>
     <h2 class="t-sec rv d1">¿Qué es un<br/><em>Convenor?</em></h2>
     <div class="bar rv d2"></div>
-
     <div class="conv-top">
       <div class="prose rv">
         <p>El Convenor es la persona responsable de la organización general del campeonato y de garantizar que el evento se desarrolle conforme a los estándares del World Schools Debating Championship (WSDC). Su función principal consiste en diseñar, coordinar y supervisar la estructura operativa del torneo, asegurando que los distintos componentes funcionen de manera integrada.</p>
@@ -175,7 +233,6 @@
         <div class="conv-stat"><div class="cs-ico"><i class="ri-medal-line"></i></div><div class="cs-val">V</div><div class="cs-lbl">Edición del Campeonato Nacional</div></div>
       </div>
     </div>
-
     <div class="conv-cards rv">
       <div class="conv-card">
         <div class="cc-n">01</div>
@@ -203,7 +260,6 @@
     <div class="retos-lead prose rv">
       <p>La transición del CND hacia el formato WSDC plantea retos claros que debemos abordar de manera estratégica. Reconocerlos con precisión es el primer paso para resolverlos bien.</p>
     </div>
-
     <div class="retos-cols rv">
       <div>
         <div class="rg-head"><div class="rg-ico pu"><i class="ri-graduation-cap-line"></i></div><h3>Retos Académicos</h3></div>
@@ -218,7 +274,6 @@
         <div class="reto-row"><div class="r-ico am"><i class="ri-group-line"></i></div><p>Manejo, convivencia y eficiencia del Staff Logístico.</p></div>
       </div>
     </div>
-
     <div class="rv" style="text-align:center; margin-top:3.5rem;">
       <a href="#sec-docs" class="btn btn-dark"><i class="ri-file-text-line"></i> Ver manual de propuestas</a>
     </div>
@@ -242,7 +297,6 @@
         <a href="#sec-docs">Consultar Manual de Propuestas completo <i class="ri-arrow-right-line"></i></a>
       </div>
     </div>
-
     <div class="p-grid rv">
       <div class="p-grp">
         <h3><i class="ri-graduation-cap-line"></i> Propuestas Académicas</h3>
@@ -308,8 +362,6 @@
     <div class="resp-intro prose rv">
       <p>Como parte de la construcción de esta candidatura, se ha contado con el acompañamiento y retroalimentación de personas con experiencia directa en el circuito WSDC. Su orientación ha permitido fortalecer el diseño académico y logístico de las propuestas, asegurando que la transición se plantee alineada con los estándares del circuito internacional.</p>
     </div>
-
-    <!-- Featured – Rok + Loke -->
     <div class="resp-featured rv">
       <div class="resp-big">
         <div class="resp-big-photo">
@@ -336,8 +388,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Small – Scott + Anastazija -->
     <div class="resp-small-grid rv d2">
       <div class="resp-small">
         <div class="resp-small-icon"><i class="ri-scales-3-line"></i></div>
@@ -355,59 +405,7 @@
   </div>
 </section>
 
-<!-- ══ VIII. NÁTALY ══════════════════════════════════════ -->
-<section class="sec" id="sec-nataly">
-  <div class="nat-bg">
-    <div class="nat-orb nat-orb-a"></div>
-    <div class="nat-orb nat-orb-b"></div>
-    <div class="nat-orb nat-orb-c"></div>
-    <div class="nat-grid-lines"></div>
-  </div>
-  <div class="wrap">
-
-    <!-- Header image -->
-    <div class="nat-header rv">
-      <img src="nataly-texto.png" alt="Nátaly Raposo" class="nat-header-img"/>
-    </div>
-
-    <!-- Gallery -->
-    <div class="nat-gallery rv d1">
-      <div class="nat-gallery-stage">
-        <img id="natGalleryImg" src="1.jpeg" alt="Nátaly Raposo foto 1"/>
-
-        <!-- Prev / Next arrows -->
-        <button class="nat-arrow nat-prev" id="natPrev" aria-label="Anterior">
-          <i class="ri-arrow-left-s-line"></i>
-        </button>
-        <button class="nat-arrow nat-next" id="natNext" aria-label="Siguiente">
-          <i class="ri-arrow-right-s-line"></i>
-        </button>
-
-        <!-- Counter -->
-        <div class="nat-counter">
-          <span id="natCurrent">1</span><span class="nat-sep">/</span><span>10</span>
-        </div>
-      </div>
-
-      <!-- Dot indicators -->
-      <div class="nat-dots" id="natDots">
-        <button class="nat-dot active" data-i="0"></button>
-        <button class="nat-dot" data-i="1"></button>
-        <button class="nat-dot" data-i="2"></button>
-        <button class="nat-dot" data-i="3"></button>
-        <button class="nat-dot" data-i="4"></button>
-        <button class="nat-dot" data-i="5"></button>
-        <button class="nat-dot" data-i="6"></button>
-        <button class="nat-dot" data-i="7"></button>
-        <button class="nat-dot" data-i="8"></button>
-        <button class="nat-dot" data-i="9"></button>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══ IX. DOCUMENTOS ════════════════════════════════════ -->
+<!-- ══ VIII. DOCUMENTOS ═══════════════════════════════════ -->
 <section class="sec" id="sec-docs">
   <div class="bg-geo"><span></span><span></span><span></span><span></span></div>
   <div class="wrap">
@@ -436,8 +434,6 @@
   <div class="ft-line"></div>
 </footer>
 
-<!-- Scripts -->
 <script src="app.js"></script>
-
 </body>
 </html>
