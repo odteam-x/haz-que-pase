@@ -17,8 +17,9 @@
 
 <!-- ══ MOBILE MENU ═══════════════════════════════════════ -->
 <div class="mob-menu" id="mobMenu">
-  <a href="#sec-hero"  onclick="closeMob()">Inicio</a>
+  <a href="#sec-hero"   onclick="closeMob()">Inicio</a>
   <div class="mob-divider"></div>
+  <a href="#sec-nataly" onclick="closeMob()">Nátaly</a>
   <a href="#sec-hqp"   onclick="closeMob()">Haz Que Pase</a>
   <a href="#sec-conv"  onclick="closeMob()">Convenor</a>
   <a href="#sec-retos" onclick="closeMob()">Retos</a>
@@ -34,6 +35,7 @@
     <img src="logo.png" alt="Haz Que Pase"/>
   </a>
   <ul class="nav-links">
+    <li><a href="#sec-nataly">Nátaly</a></li>
     <li><a href="#sec-hqp">El Proyecto</a></li>
     <li><a href="#sec-conv">Convenor</a></li>
     <li><a href="#sec-retos">Retos</a></li>
@@ -78,7 +80,7 @@
       </div>
     </div>
   </div>
-  <div class="hero-scroll"><span>Scroll</span><i class="ri-arrow-down-s-line"></i></div>
+
 </section>
 
 <!-- ══ GALERÍA NÁTALY ════════════════════════════════════ -->
@@ -306,7 +308,7 @@
           <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Sistema Escalonado de Seguimiento</span></div>
           <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Alternativas Complementarias de Formación</span></div>
           <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Estrategia de Normalización del Aprendizaje (ENA)</span></div>
-          <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Coaches Evaluadores</span></div>
+          <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Matiz Psicológica</span></div>
           <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Sistema de Seguimiento Emocional (SSE)</span></div>
           <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Incentivos de Permanencia</span></div>
           <div class="p-item"><div class="p-ico"><i class="ri-trophy-line"></i></div><span>Plan de Identidad Regional</span></div>
@@ -366,7 +368,7 @@
     <div class="resp-featured rv">
       <div class="resp-big">
         <div class="resp-big-photo">
-          <img src="rok.png" alt="Rok Hafner" onerror="this.style.display='none'"/>
+          <img src="rok.png" alt="Rok Hafner" style="object-position: right center; transform: scale(1.15); transform-origin: right center;" onerror="this.style.display='none'"/>
           <div class="resp-big-photo-label"><i class="ri-video-chat-line"></i> Reunión de asesoría</div>
         </div>
         <div class="resp-big-body">
@@ -414,11 +416,24 @@
     <h2 class="t-sec rv d1">Documentos de<br/><em>Referencia</em></h2>
     <div class="bar rv d2"></div>
     <div class="docs-grid rv">
-      <a class="doc" href="https://drive.google.com/file/d/1FNWIumlaDI3mJf0Yf4VO4RJUiuM3jXmv/view?usp=drive_link" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC Kenia 2026</div><div class="doc-sub">Documento de candidatura</div></div></a>
-      <a class="doc" href="BID-WSDC-2023.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC 2023</div><div class="doc-sub">Documento de referencia</div></div></a>
-      <a class="doc" href="Reglamento.pdf" target="_blank"><div class="doc-ico"><i class="ri-file-list-3-line"></i></div><div><div class="doc-tit">Reglamento</div><div class="doc-sub">Reglamento oficial del CND</div></div></a>
-      <a class="doc" href="BID-WSDC-2024.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC 2024</div><div class="doc-sub">Documento de referencia</div></div></a>
+      <!-- MANUAL DE PROPUESTAS – destacado -->
+      <div class="doc doc-featured">
+        <div class="doc-featured-left">
+          <div class="doc-ico doc-ico-featured"><i class="ri-book-2-line"></i></div>
+          <div>
+            <div class="doc-tit doc-tit-featured">Manual de Propuestas</div>
+            <div class="doc-sub doc-sub-featured">BID · Bases de Información Documentada</div>
+          </div>
+        </div>
+        <a href="#" class="btn btn-doc-access"><i class="ri-external-link-line"></i> Acceder</a>
+      </div>
+      <!-- REGLAMENTO WSDC -->
+      <a class="doc" href="Reglamento.pdf" target="_blank"><div class="doc-ico"><i class="ri-file-list-3-line"></i></div><div><div class="doc-tit">WSDC</div><div class="doc-sub">Reglamento oficial del WSDC</div></div></a>
+      <!-- BIDs en orden descendente -->
+      <a class="doc" href="https://drive.google.com/file/d/1FNWIumlaDI3mJf0Yf4VO4RJUiuM3jXmv/view?usp=drive_link" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC Kenia 2026</div><div class="doc-sub">Documento de referencia</div></div></a>
       <a class="doc" href="BID-WSDC-2025.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC 2025</div><div class="doc-sub">Documento de referencia</div></div></a>
+      <a class="doc" href="BID-WSDC-2024.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC 2024</div><div class="doc-sub">Documento de referencia</div></div></a>
+      <a class="doc" href="BID-WSDC-2023.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC 2023</div><div class="doc-sub">Documento de referencia</div></div></a>
     </div>
   </div>
 </section>
