@@ -26,7 +26,9 @@
   <a href="#sec-prop"  onclick="closeMob()">Propuestas</a>
   <a href="#sec-resp"  onclick="closeMob()">Respaldo</a>
   <div class="mob-divider"></div>
-  <a href="#sec-docs"  onclick="closeMob()">Documentos</a>
+  <a href="#sec-docs"       onclick="closeMob()">Documentos</a>
+  <a href="#sec-agenda"     onclick="closeMob()">Agenda CND</a>
+  <a href="#sec-estructura" onclick="closeMob()">Estructura CND</a>
 </div>
 
 <!-- ══ NAV ════════════════════════════════════════════════ -->
@@ -42,6 +44,8 @@
     <li><a href="#sec-prop">Propuestas</a></li>
     <li><a href="#sec-resp">Respaldo</a></li>
     <li><a href="#sec-docs" class="nav-cta">Ver Manual</a></li>
+    <li><a href="#sec-agenda">Agenda</a></li>
+    <li><a href="#sec-estructura">Estructura</a></li>
   </ul>
   <button class="burger" id="burger" aria-label="Menú">
     <span></span><span></span><span></span>
@@ -416,20 +420,68 @@
     <h2 class="t-sec rv d1">Documentos de<br/><em>Referencia</em></h2>
     <div class="bar rv d2"></div>
     <div class="docs-grid rv">
-      <!-- MANUAL DE PROPUESTAS – destacado -->
-      <div class="doc doc-featured">
-        <div class="doc-featured-left">
-          <div class="doc-ico doc-ico-featured"><i class="ri-book-2-line"></i></div>
+      <!-- MANUAL DE PROPUESTAS – destacado con preview -->
+      <div class="doc doc-manual-hero">
+        <div class="doc-manual-preview">
+          <div class="doc-manual-preview-glow"></div>
+          <div class="doc-manual-img-wrap">
+            <img src="manual.png" alt="Manual de Propuestas HQP" class="doc-manual-img"
+              onerror="this.parentElement.innerHTML='<div class=doc-manual-placeholder><i class=\'ri-book-2-line\'></i></div>'"/>
+          </div>
+          <div class="doc-manual-preview-badge"><i class="ri-file-text-line"></i> BID · Bases de Información Documentada</div>
+        </div>
+        <div class="doc-manual-body">
+          <div class="doc-manual-tag"><i class="ri-star-fill"></i> Documento Principal</div>
+          <h3 class="doc-manual-title">Manual de<br/>Propuestas</h3>
+          <p class="doc-manual-desc">El documento central de la campaña. Recoge todas las propuestas académicas y logísticas del proyecto <strong>Haz Que Pase</strong>, diseñadas para el V Campeonato Nacional de Debate bajo el formato WSDC.</p>
+          <div class="doc-manual-pills">
+            <span><i class="ri-graduation-cap-line"></i> Propuestas Académicas</span>
+            <span><i class="ri-settings-3-line"></i> Propuestas Logísticas</span>
+            <span><i class="ri-global-line"></i> Formato WSDC</span>
+          </div>
+          <a href="https://heyzine.com/flip-book/6c74bc73fc.html" class="btn btn-doc-access btn-doc-access-lg"><i class="ri-external-link-line"></i> Acceder al Manual</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── AGENDA LOGÍSTICA ───────────────────────────────── -->
+    <div class="inline-sec" id="sec-agenda">
+      <div class="inline-sec-header rv">
+        <div class="inline-sec-left">
+          <div class="inline-sec-ico"><i class="ri-calendar-event-line"></i></div>
           <div>
-            <div class="doc-tit doc-tit-featured">Manual de Propuestas</div>
-            <div class="doc-sub doc-sub-featured">BID · Bases de Información Documentada</div>
+            <div class="eye" style="margin-bottom:.3rem">Organización</div>
+            <h3 class="inline-sec-title">Agenda Logística <em>V CND</em></h3>
           </div>
         </div>
-        <a href="#" class="btn btn-doc-access"><i class="ri-external-link-line"></i> Acceder</a>
+        <div class="empty-badge"><i class="ri-time-line"></i> Próximamente disponible</div>
       </div>
-      <!-- REGLAMENTO WSDC -->
+      <div class="inline-sec-body rv d1">
+        <p>La agenda logística oficial del V Campeonato Nacional de Debate estará disponible próximamente. Incluirá el cronograma completo de actividades, rondas, ceremonias y espacios formativos del campeonato.</p>
+      </div>
+    </div>
+
+    <!-- ── ESTRUCTURA ORGANIZACIONAL ─────────────────────── -->
+    <div class="inline-sec" id="sec-estructura">
+      <div class="inline-sec-header rv">
+        <div class="inline-sec-left">
+          <div class="inline-sec-ico"><i class="ri-organization-chart"></i></div>
+          <div>
+            <div class="eye" style="margin-bottom:.3rem">Organización</div>
+            <h3 class="inline-sec-title">Estructura Organizacional <em>V CND</em></h3>
+          </div>
+        </div>
+        <div class="empty-badge"><i class="ri-time-line"></i> Próximamente disponible</div>
+      </div>
+      <div class="inline-sec-body rv d1">
+        <p>La estructura organizacional del V CND estará disponible próximamente. Detallará los equipos de trabajo, roles, responsabilidades y la jerarquía operativa del campeonato bajo el proyecto Haz Que Pase.</p>
+      </div>
+    </div>
+
+    <!-- ── OTROS DOCUMENTOS ───────────────────────────────── -->
+    <div class="docs-divider rv"><span>Otros documentos de referencia</span></div>
+    <div class="docs-grid docs-grid-sm rv">
       <a class="doc" href="Reglamento.pdf" target="_blank"><div class="doc-ico"><i class="ri-file-list-3-line"></i></div><div><div class="doc-tit">WSDC</div><div class="doc-sub">Reglamento oficial del WSDC</div></div></a>
-      <!-- BIDs en orden descendente -->
       <a class="doc" href="https://drive.google.com/file/d/1FNWIumlaDI3mJf0Yf4VO4RJUiuM3jXmv/view?usp=drive_link" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC Kenia 2026</div><div class="doc-sub">Documento de referencia</div></div></a>
       <a class="doc" href="BID-WSDC-2025.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC 2025</div><div class="doc-sub">Documento de referencia</div></div></a>
       <a class="doc" href="BID-WSDC-2024.pdf" target="_blank"><div class="doc-ico"><i class="ri-earth-line"></i></div><div><div class="doc-tit">BID WSDC 2024</div><div class="doc-sub">Documento de referencia</div></div></a>

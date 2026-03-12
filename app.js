@@ -141,8 +141,15 @@ for (let i = 0; i < 100; i++) pts.push(new Particle());
   requestAnimationFrame(animateCanvas);
 })();
 /* ══════════════════════════════════════════════════
-   NÁTALY GALLERY
+   MANUAL IMAGE – TILT / CLICK TO FLIP
 ══════════════════════════════════════════════════ */
+(function () {
+  const wrap = document.querySelector('.doc-manual-img-wrap');
+  if (!wrap) return;
+  wrap.addEventListener('click', () => {
+    wrap.classList.toggle('flipped');
+  });
+})();
 (function () {
   const TOTAL  = 10;
   const img    = document.getElementById('natGalleryImg');
