@@ -141,6 +141,20 @@ for (let i = 0; i < 100; i++) pts.push(new Particle());
   requestAnimationFrame(animateCanvas);
 })();
 /* ══════════════════════════════════════════════════
+   ESTRUCTURA ORG – TABS
+══════════════════════════════════════════════════ */
+(function () {
+  document.querySelectorAll('.org-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.org-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.org-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('org-' + tab.dataset.tab).classList.add('active');
+    });
+  });
+})();
+
+/* ══════════════════════════════════════════════════
    MANUAL IMAGE – TILT / CLICK TO FLIP
 ══════════════════════════════════════════════════ */
 (function () {
