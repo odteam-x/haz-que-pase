@@ -198,3 +198,77 @@ for (let i = 0; i < 100; i++) pts.push(new Particle());
     if (Math.abs(dx) > 40) goTo(dx < 0 ? index + 1 : index - 1);
   });
 })();
+/* ══════════════════════════════════════════════════
+   CREDITS CANVAS – FLOATING STARS + METEORS
+══════════════════════════════════════════════════ */
+(function () {
+  const canvas = document.getElementById('creditsCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H;
+
+  function resize() {
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const stars = Array.from({ length: 120 }, () => ({
+    x: Math.random(), y: Math.random(),
+    r: Math.random() * 1.2 + .2,
+    a: Math.random() * .6 + .1,
+    speed: Math.random() * .0003 + .0001,
+    phase: Math.random() * Math.PI * 2
+  }));
+
+  class Meteor {
+    constructor() { this.reset(); }
+    reset() {
+      this.x = Math.random() * W * 1.5;
+      this.y = -20;
+      this.len = Math.random() * 120 + 60;
+      this.speed = Math.random() * 3 + 2;
+      this.a = Math.random() * .5 + .2;
+      this.active = Math.random() > .6;
+      this.delay = Math.random() * 300;
+    }
+    step() {
+      if (this.delay > 0) { this.delay--; return; }
+      this.x -= this.speed * .4;
+      this.y += this.speed;
+      if (this.y > H + 50) this.reset();
+    }
+    draw() {
+      if (this.delay > 0 || !this.active) return;
+      const grad = ctx.createLinearGradient(
+        this.x, this.y,
+        this.x + this.len * .4, this.y - this.len
+      );
+      grad.addColorStop(0, `rgba(223,176,246,${this.a})`);
+      grad.addColorStop(1, 'rgba(223,176,246,0)');
+      ctx.beginPath();
+      ctx.moveTo(this.x, this.y);
+      ctx.lineTo(this.x + this.len * .4, this.y - this.len);
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+  }
+  const meteors = Array.from({ length: 6 }, () => new Meteor());
+
+  let t = 0;
+  (function tick() {
+    ctx.clearRect(0, 0, W, H);
+    t += .008;
+    stars.forEach(s => {
+      const pulse = s.a + Math.sin(t * s.speed * 60 + s.phase) * .15;
+      ctx.beginPath();
+      ctx.arc(s.x * W, s.y * H, s.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(223,176,246,${Math.max(0, pulse)})`;
+      ctx.fill();
+    });
+    meteors.forEach(m => { m.step(); m.draw(); });
+    requestAnimationFrame(tick);
+  })();
+})();
