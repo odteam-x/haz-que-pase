@@ -101,15 +101,15 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
   position: fixed; inset: 0; z-index: 490;
   background: var(--ink);
   display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 1.8rem;
+  align-items: center; justify-content: center; gap: .9rem;
   opacity: 0; pointer-events: none;
   transition: opacity .4s cubic-bezier(.23,1,.32,1);
 }
 .mob-menu.open { opacity: 1; pointer-events: all; }
 .mob-menu a {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem; font-weight: 700;
-  color: rgba(255,255,255,.75); text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem; font-weight: 700;
+  color: rgba(255,255,255,.85); text-decoration: none;
   opacity: 0; transform: translateY(8px);
   transition: color .2s,
               transform .4s cubic-bezier(.23,1,.32,1),
@@ -1280,36 +1280,24 @@ nav.shrunk { padding: .65rem 3rem; box-shadow: 0 4px 30px rgba(26,8,48,.07); }
   .btn-org-pdf { width: 100%; justify-content: center; }
 }
 
+
 /* ══════════════════════════════════════════════════
-   AGENDA BANNER
+   AGENDA CARD – variante dorada
 ══════════════════════════════════════════════════ */
-.agenda-banner {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 1.5rem; flex-wrap: wrap;
-  margin-top: 1.2rem;
-  padding: 1.4rem 1.8rem;
-  background: white;
-  border: 1.5px dashed rgba(151,90,182,.22);
-  border-radius: 18px;
-  transition: border-color .3s;
+.org-card-agenda { margin-top: 1.2rem; }
+
+.agenda-tag {
+  background: rgba(201,144,74,.1) !important;
+  border-color: rgba(201,144,74,.25) !important;
+  color: var(--gold) !important;
 }
-.agenda-banner:hover { border-color: rgba(151,90,182,.4); }
-.agenda-banner-left {
-  display: flex; align-items: center; gap: 1.1rem;
-}
-.agenda-banner-ico {
-  width: 46px; height: 46px; flex-shrink: 0; border-radius: 13px;
-  background: var(--mist); border: 1px solid rgba(151,90,182,.15);
-  display: flex; align-items: center; justify-content: center;
-}
-.agenda-banner-ico i { font-size: 1.3rem; color: var(--p3); }
-.agenda-banner-title {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 800; font-size: 1.05rem; color: var(--ink); line-height: 1.2;
-}
-.agenda-banner-title em { font-style: normal; color: var(--p3); }
-.agenda-banner-sub {
-  font-size: .77rem; color: var(--soft); margin-top: .2rem;
+.agenda-em { color: var(--gold) !important; font-style: normal; }
+
+.btn-org-pdf-agenda { background: var(--ink2); }
+.btn-org-pdf-agenda i { color: var(--gold-l); }
+.btn-org-pdf-agenda:hover {
+  background: var(--gold);
+  box-shadow: 0 14px 36px rgba(201,144,74,.35);
 }
 
 /* ══════════════════════════════════════════════════
